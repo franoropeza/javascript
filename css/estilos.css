@@ -1,0 +1,39 @@
+ #lista__productos {   
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    grid-gap: 2rem;
+    justify-content: center;
+}
+
+
+.lista {
+    position: relative;
+    width: 80%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.card-alimento {
+    border: 1px solid gray;
+    text-align: center;
+}
+
+.card__imagen {
+    max-width: 200px;
+    min-width: 200px;
+}
+
+.opcionesCalculadora {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 0px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.summary {
+    font-size: 20px;
+    font-weight: 800;
+}

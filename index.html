@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Calculadora de calorias</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  <script type='text/javascript' src='http://code.jquery.com/jquery-1.7.1.js'></script>
+    <script type='text/javascript' src='js/jquery.sumtr.js'></script>
+
+ 
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/estilos.css">
+ 
+
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+  
+
+  <div class="container">
+    <div class="row">
+      <div>
+        <h1>Calculadora de Calorias</h1>
+      </div>
+    </div>
+ 
+
+  <div class="row">
+    <div>
+      <p>Arma tu dieta a continuacion:</p>
+    </div>
+    <div>
+      <form id="calculadora">
+        
+        <span>Elige los alimentos que vas a utilzar:</span>
+        
+        <div class="opcionesCalculadora">
+        </br><select id="elegirAlimento1" aria-label="Alimento1">
+          <option></option>
+          <option>Carne de Cerdo</option>
+          <option>Carne de Vaca</option>
+          <option>Carne de Pollo</option>
+          <option>Carne de Pescado</option>
+          <option>Leche</option>
+          <option>Yogur</option>
+          <option>Quesos 1</option>
+          <option>Huevo</option>
+          <option>Jamon</option>
+          <option>Vegetales A</option>
+          <option>Frutas Frescas</option>
+        </select>
+        <span>Cantidad en gramos</span>
+        <input type="number" placeholder="0" id="cantidadGramos1">
+      </div>
+
+      <div class="opcionesCalculadora">    
+    </br><select id="elegirAlimento2">
+          <option></option>
+          <option>Carne de Cerdo</option>
+          <option>Carne de Vaca</option>
+          <option>Carne de Pollo</option>
+          <option>Carne de Pescado</option>
+          <option>Leche</option>
+          <option>Yogur</option>
+          <option>Quesos 1</option>
+          <option>Huevo</option>
+          <option>Jamon</option>
+          <option>Vegetales A</option>
+          <option>Frutas Frescas</option>
+        </select>
+        <span>Cantidad en gramos</span>
+        <input type="number" placeholder="0" id="cantidadGramos2">
+      </div>
+      
+      <div class="opcionesCalculadora">
+      </br> <select id="elegirAlimento3">
+          <option></option>
+          <option>Carne de Cerdo</option>
+          <option>Carne de Vaca</option>
+          <option>Carne de Pollo</option>
+          <option>Carne de Pescado</option>
+          <option>Leche</option>
+          <option>Yogur</option>
+          <option>Quesos 1</option>
+          <option>Huevo</option>
+          <option>Jamon</option>
+          <option>Vegetales A</option>
+          <option>Frutas Frescas</option>
+        </select>
+        <span>Cantidad en gramos</span>
+        <input type="number" placeholder="0" id="cantidadGramos3">
+      </div>
+      
+      <div class="opcionesCalculadora">
+      </br>  <select id="elegirAlimento4">
+          <option></option>
+          <option>Carne de Cerdo</option>
+          <option>Carne de Vaca</option>
+          <option>Carne de Pollo</option>
+          <option>Carne de Pescado</option>
+          <option>Leche</option>
+          <option>Yogur</option>
+          <option>Quesos 1</option>
+          <option>Huevo</option>
+          <option>Jamon</option>
+          <option>Vegetales A</option>
+          <option>Frutas Frescas</option>
+        </select>
+        <span>Cantidad en gramos</span>
+        <input type="number" placeholder="0" id="cantidadGramos4">
+      </div>
+      
+      <div class="opcionesCalculadora">
+      </br><select id="elegirAlimento5">
+          <option></option>
+          <option>Carne de Cerdo</option>
+          <option>Carne de Vaca</option>
+          <option>Carne de Pollo</option>
+          <option>Carne de Pescado</option>
+          <option>Leche</option>
+          <option>Yogur</option>
+          <option>Quesos 1</option>
+          <option>Huevo</option>
+          <option>Jamon</option>
+          <option>Vegetales A</option>
+          <option>Frutas Frescas</option>
+        </select>
+        <span>Cantidad en gramos</span>
+        <input type="number" placeholder="0" id="cantidadGramos5">
+        <input class="button-primary" type="submit" value="Calcular">
+      </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="tabla-resultados">
+    <h2>Resultado:</h2>
+    <table id="tablaResultados">
+      <thead>
+        <tr>
+          <th>Alimentos</th>
+          <th>Cantidad (g)</th>
+          <th>Hidratos de Carbono (g)</th>
+          <th>Proteinas (g)</th>
+          <th>Grasas (g)</th>
+          <th>Calorias</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td id="resultado1_Nombre"></td>
+          <td id="resultado1_Cantidad"  class="sum"></td>
+          <td id="resultado1_Hdec"  class="sum"></td>
+          <td id="resultado1_Prot"  class="sum"></td>
+          <td id="resultado1_Grasas"  class="sum"></td>
+          <td id="resultado1_Calorias" class="sum" ></td>
+        </tr>
+        <tr>
+          <td id="resultado2_Nombre"></td>
+          <td id="resultado2_Cantidad"  class="sum"></td>
+          <td id="resultado2_Hdec"  class="sum"></td>
+          <td id="resultado2_Prot"  class="sum"></td>
+          <td id="resultado2_Grasas"  class="sum"></td>
+          <td id="resultado2_Calorias" class="sum"></td>
+          
+        </tr>  
+        <tr>
+          <td id="resultado3_Nombre"></td>
+          <td id="resultado3_Cantidad"  class="sum"></td>
+          <td id="resultado3_Hdec"  class="sum"></td>
+          <td id="resultado3_Prot"  class="sum"></td>
+          <td id="resultado3_Grasas"  class="sum"></td>
+          <td id="resultado3_Calorias" class="sum"></td>
+          
+        </tr>  
+        <tr>
+          <td id="resultado4_Nombre"></td>
+          <td id="resultado4_Cantidad"  class="sum"></td>
+          <td id="resultado4_Hdec"  class="sum"></td>
+          <td id="resultado4_Prot"  class="sum"></td>
+          <td id="resultado4_Grasas" class="sum"></td>
+          <td id="resultado4_Calorias" class="sum"></td>
+          
+        </tr>  
+        <tr>
+          <td id="resultado5_Nombre"></td>
+          <td id="resultado5_Cantidad"  class="sum"></td>
+          <td id="resultado5_Hdec"  class="sum"></td>
+          <td id="resultado5_Prot"  class="sum"></td>
+          <td id="resultado5_Grasas" class="sum"></td>
+          <td id="resultado5_Calorias" class="sum"></td>
+          
+        </tr>  
+      </tbody>
+      <tfoot>
+        <tr class="summary">
+          <td id="total">TOTAL</td>
+          <td id="total_Cantidad"></td>
+          <td id="total_Hdec"></td>
+          <td id="total_Prot"></td>
+          <td id="total_Grasas"></td>
+          <td id="total_Calorias" ></td>
+        </tr> 
+      </tfoot>
+    </table>
+  </div>
+  </div>
+ 
+
+  <div id="app"></div>
+  
+<!-- 
+  <h3>Listado de Alimentos</h3>
+  <div class="row lista">
+  <div id="lista__productos">
+    
+
+        <div class="card-alimento">
+          <img class="card__imagen" src="images/carne_de_cerdo.jpg">
+          <h4>Carne de Cerdo</h4>
+          <p>Porcion 100g</p>
+          <p>257 Kcal</p>
+          <a class="button button-primary" href="">Agregar a mi dieta</a>
+        </div>
+
+        <div class="card-alimento">
+          <img class="card__imagen" src="images/carne_de_vaca.png">
+          <h4>Carne de Vaca</h4>
+          <p>Porcion 100g</p>
+          <p>170 Kcal</p>
+          <a class="button button-primary" href="">Agregar a mi dieta</a>
+        </div>
+
+        <div class="card-alimento">
+          <img class="card__imagen" src="images/carne_de_pollo.jpg">
+          <h4>Carne de Pollo</h4>
+          <p>Porcion 100g</p>
+          <p>134 Kcal</p>
+          <a class="button button-primary" href="">Agregar a mi dieta</a>
+        </div>
+
+        <div class="card-alimento">
+          <img class="card__imagen" src="alimento.jpg">
+          <h4>Nombre</h4>
+          <p>Valores</p>
+          <a class="button button-primary" href="">Agregar a mi dieta</a>
+        </div>
+
+        <div class="card-alimento">
+          <img class="card__imagen" src="alimento.jpg">
+          <h4>Nombre</h4>
+          <p>Valores</p>
+          <a class="button button-primary" href="">Agregar a mi dieta</a>
+        </div>
+
+        <div class="card-alimento">
+          <img class="card__imagen" src="alimento.jpg">
+          <h4>Nombre</h4>
+          <p>Valores</p>
+          <a class="button button-primary" href="">Agregar a mi dieta</a>
+        </div>
+
+        <div class="card-alimento">
+          <img class="card__imagen" src="alimento.jpg">
+          <h4>Nombre</h4>
+          <p>Valores</p>
+          <a class="button button-primary" href="">Agregar a mi dieta</a>
+        </div>
+
+        <div class="card-alimento">
+          <img class="card__imagen" src="alimento.jpg">
+          <h4>Nombre</h4>
+          <p>Valores</p>
+          <a class="button button-primary" href="">Agregar a mi dieta</a>
+        </div>
+
+        <div class="card-alimento">
+          <img class="card__imagen" src="alimento.jpg">
+          <h4>Nombre</h4>
+          <p>Valores</p>
+          <a class="button button-primary" href="">Agregar a mi dieta</a>
+        </div>
+
+        <div class="card-alimento">
+          <img class="card__imagen" src="alimento.jpg">
+          <h4>Nombre</h4>
+          <p>Valores</p>
+          <a class="button button-primary" href="">Agregar a mi dieta</a>
+        </div>
+
+  </div>
+  </div>
+
+  <div>
+    <p>¿No encontrás el alimento que necesitás? Agregar nuevo alimento</p>
+    <form>
+      <input type="" name="">
+    </form>
+  </div>
+
+</div>
+ </div> -->
+
+
+ <script src="js/script.js"></script>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
